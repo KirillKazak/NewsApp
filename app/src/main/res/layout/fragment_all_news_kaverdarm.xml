@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentationKaverdram.allNewsFragmentKaverdarm.AllNewsFragmentKaverdarm"
+    android:background="@drawable/main_bg_night_kavedarm">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="16dp"
+        android:layout_height="20dp"
+        android:id="@+id/btnGoBackAllNewsKaverdram"
+        android:background="@drawable/back_arrow_kaverdarm"
+        app:layout_constraintTop_toTopOf="@id/tvAllNewsTitleKaverdarm"
+        app:layout_constraintBottom_toBottomOf="@id/tvAllNewsTitleKaverdarm"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="24dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvAllNewsTitleKaverdarm"
+        android:text="@string/lastNewsKaverdarm"
+        android:textAlignment="textStart"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:textAllCaps="true"
+        android:fontFamily="@font/roboto_medium_kaverdam"
+        android:layout_marginStart="12dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnGoBackAllNewsKaverdram"
+        android:layout_marginTop="24dp"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/btnSearchAllNewsKaverdarm"
+        android:background="@drawable/search_kaverdarm"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintTop_toTopOf="@id/tvAllNewsTitleKaverdarm"
+        app:layout_constraintBottom_toBottomOf="@id/tvAllNewsTitleKaverdarm"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/recyclerViewAllNewsKaverdarm"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="vertical"
+        tools:listitem="@layout/last_news_item_kaverdarm"
+        android:layout_marginVertical="12dp"
+        app:layout_constraintTop_toBottomOf="@id/btnSearchAllNewsKaverdarm"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Betaio</string>
+    <string name="сontinueKavedarm">Continuar</string>
+    <string name="readKavedarm">Li e aceito a Política de Privacidade</string>
+    <string name="newsKaverdarm">notícia</string>
+    <string name="lastNewsKaverdarm">últimas notícias</string>
+    <string name="edtHintKaverdarm">Procure palavras-chave</string>
+    <string name="resultWordKaverdam">\"Resultado da pesquisa: \"</string>
+    <string name="saveNewsKaverdarm">favoritas</string>
+    <string name="moderationKaverdarm">Moderação</string>
+    <string name="youDontSaveNewsKaverdarm">Você não salvoualguma notícia ainda</string>
+    <string name="ddNewsKaverdarm">Adicionar notícias</string>
+    <string name="myNewsKaverdarm">minhas notícias</string>
+    <string name="youDontAddNewsKaverdarm">Você ainda não adicionou nenhuma notícia</string>
+    <string name="addTitleForArticleKaverdam">Adicionar título ao artigo</string>
+    <string name="addDescriptionForArticleKaverdam">Adicione uma breve descrição para um artigo</string>
+    <string name="createNewsKaverdarm">Publicar notícias</string>
+    <string name="addContentForArticleKaverdam">Adicione o corpo do texto do artigo</string>
+    <string name="dontEnterContentKaverdarm">Alguns campos estão vazios</string>
+</resources>

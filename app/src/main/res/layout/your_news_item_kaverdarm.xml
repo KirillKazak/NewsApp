@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginHorizontal="24dp"
+    android:layout_marginTop="8dp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/yourNewsItemKaverdarm"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/viewYourNewsItemKaverdarm">
+        <ImageView
+            android:layout_width="140dp"
+            android:layout_height="100dp"
+            android:id="@+id/ivYourNewsImgKaverdarm"
+            tools:background="#423F3F"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvYourNewsTitleKaverdam"
+            tools:text="Headline of the news"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textAlignment="textStart"
+            android:fontFamily="@font/roboto_medium_kaverdam"
+            android:layout_marginStart="6dp"
+            app:layout_constraintStart_toEndOf="@id/ivYourNewsImgKaverdarm"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ivYourNewsImgKaverdarm"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvYourDescriptionKaverdam"
+            tools:text="A brief description of what is contained in this news release. It is written about what this news is about."
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textAlignment="textStart"
+            android:fontFamily="@font/roboto_regular_kaverdam"
+            android:layout_marginStart="6dp"
+            app:layout_constraintStart_toEndOf="@id/ivYourNewsImgKaverdarm"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvYourNewsTitleKaverdam" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvYourNewsSateKaverdarm"
+            android:text="@string/moderationKaverdarm"
+            android:textColor="#AE3E3E"
+            android:textSize="12sp"
+            android:textAlignment="center"
+            android:fontFamily="@font/roboto_regular_kaverdam"
+            app:layout_constraintStart_toStartOf="@id/tvYourDescriptionKaverdam"
+            app:layout_constraintTop_toBottomOf="@id/tvYourDescriptionKaverdam" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="18dp"
+            android:layout_height="14dp"
+            android:id="@+id/btnReedMoreYourNewsKaverdarm"
+            android:background="@drawable/arrows_orange_kavedarm"
+            app:layout_constraintTop_toTopOf="@id/tvYourNewsSateKaverdarm"
+            app:layout_constraintBottom_toBottomOf="@id/tvYourNewsSateKaverdarm"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:id="@+id/viewYourNewsItemKaverdarm"
+        android:background="#2F2F2F"
+        app:layout_constraintTop_toBottomOf="@id/yourNewsItemKaverdarm"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="12dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

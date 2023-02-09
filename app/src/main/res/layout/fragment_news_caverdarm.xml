@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentationKaverdram.newsFragmentsKaverdarm.NewsFragmentKaverdarm"
+    android:background="@drawable/main_bg_night_kavedarm">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/topToolBarNewsKaverdarm"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvNewsKaverdarm"
+            android:text="@string/newsKaverdarm"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:textAllCaps="true"
+            android:fontFamily="@font/roboto_medium_kaverdam"
+            android:layout_marginStart="24dp"
+            app:layout_constraintTop_toTopOf="@id/btnBookmarkNewsKaverdarm"
+            app:layout_constraintBottom_toBottomOf="@id/btnBookmarkNewsKaverdarm"
+            app:layout_constraintStart_toStartOf="parent"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/btnBookmarkNewsKaverdarm"
+            android:background="@drawable/icon_bookmark_kaverdarm"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/btnSearchNewsKaverdarm"
+            android:background="@drawable/search_kaverdarm"
+            android:layout_marginEnd="6dp"
+            app:layout_constraintTop_toTopOf="@id/btnBookmarkNewsKaverdarm"
+            app:layout_constraintBottom_toBottomOf="@id/btnBookmarkNewsKaverdarm"
+            app:layout_constraintEnd_toStartOf="@id/btnBookmarkNewsKaverdarm"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/headlineNewsLayoutKaverdarm"
+        app:layout_constraintTop_toBottomOf="@id/topToolBarNewsKaverdarm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:id="@+id/viewPagerHeadlineNewsKaverdarm"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="12dp"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="8dp"
+            android:id="@+id/paginationHeadlineKaverdarm"
+            android:background="@drawable/pagination_1_dark_kaverdarm"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/viewPagerHeadlineNewsKaverdarm"
+            tools:ignore="ContentDescription" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#2F2F2F"
+            app:layout_constraintTop_toBottomOf="@id/paginationHeadlineKaverdarm"
+            android:layout_marginTop="16dp"
+            android:layout_marginHorizontal="20dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/lastNewsLayoutKaverdarm"
+        app:layout_constraintTop_toBottomOf="@id/headlineNewsLayoutKaverdarm"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvLastNewsKaverdarm"
+            android:text="@string/lastNewsKaverdarm"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:textAllCaps="true"
+            android:fontFamily="@font/roboto_medium_kaverdam"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="76dp"
+            android:layout_height="14dp"
+            android:id="@+id/btnOpenAllNewsKaverdarm"
+            android:background="@drawable/btn_open_all_kaverdarm"
+            app:layout_constraintTop_toTopOf="@id/tvLastNewsKaverdarm"
+            app:layout_constraintBottom_toBottomOf="@id/tvLastNewsKaverdarm"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="24dp"/>
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@drawable/orange_line_kaverdram"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="@id/btnOpenAllNewsKaverdarm"
+            app:layout_constraintEnd_toEndOf="@id/btnOpenAllNewsKaverdarm"
+            app:layout_constraintTop_toBottomOf="@id/btnOpenAllNewsKaverdarm"
+            tools:ignore="ContentDescription" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/recyclerViewLastNewsKaverdarm"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="vertical"
+            tools:listitem="@layout/last_news_item_kaverdarm"
+            android:layout_marginVertical="12dp"
+            app:layout_constraintTop_toBottomOf="@id/tvLastNewsKaverdarm"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/shadow_kaverdram"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/btnAddedNewsKaverdarm"
+        android:background="@drawable/button_add_kaverdarm"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="24dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

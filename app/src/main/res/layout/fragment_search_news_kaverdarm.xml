@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentationKaverdram.searchNewsFragmentKaverdarm.SearchNewsFragmentKaverdarm"
+    android:background="@drawable/main_bg_night_kavedarm">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="16dp"
+        android:layout_height="20dp"
+        android:id="@+id/btnGoBackSearchNewsKaverdram"
+        android:background="@drawable/back_arrow_kaverdarm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/searchLayoutKaverdarm"
+        app:layout_constraintBottom_toBottomOf="@id/searchLayoutKaverdarm"
+        android:layout_marginStart="24dp"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:id="@+id/searchLayoutKaverdarm"
+        android:background="@drawable/input_field_kaverdarm"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnGoBackSearchNewsKaverdram"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="24dp">
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/btnSearchKaverdarm"
+            android:background="@drawable/search_kaverdarm"
+            android:layout_marginEnd="12dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/edtSearchKaverdarm"
+            android:hint="@string/edtHintKaverdarm"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:fontFamily="@font/roboto_regular_kaverdam"
+            android:maxLength="12"
+            android:minLines="1"
+            android:maxLines="1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnSearchKaverdarm"
+            android:layout_marginHorizontal="12dp"
+            tools:ignore="Autofill,TextFields" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvSearchWordKaverdarm"
+        tools:text="Resultado da pesquisa: messi"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/roboto_regular_kaverdam"
+        app:layout_constraintStart_toStartOf="@id/btnGoBackSearchNewsKaverdram"
+        app:layout_constraintTop_toBottomOf="@id/searchLayoutKaverdarm"
+        android:layout_marginTop="8dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:id="@+id/btnCanselSearchWordKaverdarm"
+        android:background="@drawable/btn_closse_kaverdarm"
+        app:layout_constraintStart_toEndOf="@id/tvSearchWordKaverdarm"
+        app:layout_constraintTop_toTopOf="@id/tvSearchWordKaverdarm"
+        app:layout_constraintBottom_toBottomOf="@id/tvSearchWordKaverdarm"
+        android:layout_marginStart="6dp"
+        android:visibility="invisible"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/recyclerViewSearchedNewsKaverdarm"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="vertical"
+        tools:listitem="@layout/last_news_item_kaverdarm"
+        android:layout_marginVertical="12dp"
+        app:layout_constraintTop_toBottomOf="@id/tvSearchWordKaverdarm"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/shadow_kaverdram"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
